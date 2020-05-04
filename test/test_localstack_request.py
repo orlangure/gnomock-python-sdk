@@ -37,7 +37,7 @@ class TestLocalstackRequest(unittest.TestCase):
         if include_optional :
             return LocalstackRequest(
                 preset = {"services":["s3"]}, 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

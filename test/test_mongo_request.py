@@ -36,11 +36,11 @@ class TestMongoRequest(unittest.TestCase):
         # model = gnomock.models.mongo_request.MongoRequest()  # noqa: E501
         if include_optional :
             return MongoRequest(
-                preset = gnomock.models.mongo.mongo(
+                preset = gnomock.models.mongo.Mongo(
                     data_path = '/home/gnomock/project/testdata/mongo/data', 
                     user = 'gnomock', 
                     password = 'p@s$w0rD', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

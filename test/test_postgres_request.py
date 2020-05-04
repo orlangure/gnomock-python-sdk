@@ -36,13 +36,13 @@ class TestPostgresRequest(unittest.TestCase):
         # model = gnomock.models.postgres_request.PostgresRequest()  # noqa: E501
         if include_optional :
             return PostgresRequest(
-                preset = gnomock.models.postgres.postgres(
+                preset = gnomock.models.postgres.Postgres(
                     db = 'postgres', 
                     user = 'postgres', 
                     password = 'password', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
                     queries_file = '/home/gnomock/project/testdata/postgres/queries', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

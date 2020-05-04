@@ -36,9 +36,9 @@ class TestSplunkRequest(unittest.TestCase):
         # model = gnomock.models.splunk_request.SplunkRequest()  # noqa: E501
         if include_optional :
             return SplunkRequest(
-                preset = gnomock.models.splunk.splunk(
+                preset = gnomock.models.splunk.Splunk(
                     values = [
-                        gnomock.models.splunk_values.splunk_values(
+                        gnomock.models.splunk_values.SplunkValues(
                             event = 'something happened', 
                             index = 'main', 
                             source = 'web', 
@@ -50,7 +50,7 @@ class TestSplunkRequest(unittest.TestCase):
                     admin_password = 'p@s$w0rD', 
                     init_timeout = 30000000000, 
                     version = '8.0.2.1', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

@@ -36,13 +36,13 @@ class TestMysqlRequest(unittest.TestCase):
         # model = gnomock.models.mysql_request.MysqlRequest()  # noqa: E501
         if include_optional :
             return MysqlRequest(
-                preset = gnomock.models.mysql.mysql(
+                preset = gnomock.models.mysql.Mysql(
                     db = 'mydb', 
                     user = 'gnomock', 
                     password = 'gnomick', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
                     queries_file = '/home/gnomock/project/testdata/mysql/queries', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

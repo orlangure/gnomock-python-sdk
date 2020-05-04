@@ -36,13 +36,13 @@ class TestMssqlRequest(unittest.TestCase):
         # model = gnomock.models.mssql_request.MssqlRequest()  # noqa: E501
         if include_optional :
             return MssqlRequest(
-                preset = gnomock.models.mssql.mssql(
+                preset = gnomock.models.mssql.Mssql(
                     db = 'mydb', 
                     password = 'Gn0m!ck~', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
                     queries_file = '/home/gnomock/project/testdata/mssql/queries', 
                     license = True, ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

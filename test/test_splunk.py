@@ -37,7 +37,7 @@ class TestSplunk(unittest.TestCase):
         if include_optional :
             return Splunk(
                 values = [
-                    gnomock.models.splunk_values.splunk_values(
+                    gnomock.models.splunk_values.SplunkValues(
                         event = 'something happened', 
                         index = 'main', 
                         source = 'web', 

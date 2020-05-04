@@ -36,9 +36,9 @@ class TestRedisRequest(unittest.TestCase):
         # model = gnomock.models.redis_request.RedisRequest()  # noqa: E501
         if include_optional :
             return RedisRequest(
-                preset = gnomock.models.redis.redis(
+                preset = gnomock.models.redis.Redis(
                     values = {"foo":"bar","baz":42,"meh":3.14}, ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     start_timeout = 120000000000, 
                     wait_timeout = 30000000000, 
                     env = [

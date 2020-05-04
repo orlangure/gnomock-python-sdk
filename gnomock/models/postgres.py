@@ -48,7 +48,7 @@ class Postgres(object):
         'queries_file': 'queries_file'
     }
 
-    def __init__(self, db='postgres', user='postgres', password='password', queries=None, queries_file=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, db=None, user=None, password=None, queries=None, queries_file=None, local_vars_configuration=None):  # noqa: E501
         """Postgres - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -76,7 +76,7 @@ class Postgres(object):
     def db(self):
         """Gets the db of this Postgres.  # noqa: E501
 
-        Database name to create.  # noqa: E501
+        Database name to create. By default, `postgres` is used.  # noqa: E501
 
         :return: The db of this Postgres.  # noqa: E501
         :rtype: str
@@ -87,7 +87,7 @@ class Postgres(object):
     def db(self, db):
         """Sets the db of this Postgres.
 
-        Database name to create.  # noqa: E501
+        Database name to create. By default, `postgres` is used.  # noqa: E501
 
         :param db: The db of this Postgres.  # noqa: E501
         :type: str
@@ -99,7 +99,7 @@ class Postgres(object):
     def user(self):
         """Gets the user of this Postgres.  # noqa: E501
 
-        User to create in the container.  # noqa: E501
+        User to create in the container. By default, `postgres` is used with password `password`.   # noqa: E501
 
         :return: The user of this Postgres.  # noqa: E501
         :rtype: str
@@ -110,7 +110,7 @@ class Postgres(object):
     def user(self, user):
         """Sets the user of this Postgres.
 
-        User to create in the container.  # noqa: E501
+        User to create in the container. By default, `postgres` is used with password `password`.   # noqa: E501
 
         :param user: The user of this Postgres.  # noqa: E501
         :type: str
