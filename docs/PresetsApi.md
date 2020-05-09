@@ -27,6 +27,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -83,6 +89,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -139,6 +151,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -195,6 +213,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -251,6 +275,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -307,6 +337,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -363,6 +399,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
@@ -419,6 +461,12 @@ import time
 import gnomock
 from gnomock.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
 
 # Enter a context with an instance of the API client
 with gnomock.ApiClient() as api_client:
