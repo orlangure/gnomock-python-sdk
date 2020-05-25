@@ -4,7 +4,7 @@ This object includes general Gnomock configuration, similar to all presets. Time
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**wait_timeout** | **int** | Wait timeout in nanoseconds | [optional] 
+**timeout** | **int** | Wait timeout in nanoseconds | [optional] 
 **env** | **list[str]** | Array of environment variables to set in the container | [optional] 
 **tag** | **str** | Docker image tag | [optional] 
 
