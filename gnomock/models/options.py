@@ -33,62 +33,34 @@ class Options(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'start_timeout': 'int',
         'wait_timeout': 'int',
         'env': 'list[str]',
         'tag': 'str'
     }
 
     attribute_map = {
-        'start_timeout': 'start_timeout',
         'wait_timeout': 'wait_timeout',
         'env': 'env',
         'tag': 'tag'
     }
 
-    def __init__(self, start_timeout=None, wait_timeout=None, env=None, tag=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, wait_timeout=None, env=None, tag=None, local_vars_configuration=None):  # noqa: E501
         """Options - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._start_timeout = None
         self._wait_timeout = None
         self._env = None
         self._tag = None
         self.discriminator = None
 
-        if start_timeout is not None:
-            self.start_timeout = start_timeout
         if wait_timeout is not None:
             self.wait_timeout = wait_timeout
         if env is not None:
             self.env = env
         if tag is not None:
             self.tag = tag
-
-    @property
-    def start_timeout(self):
-        """Gets the start_timeout of this Options.  # noqa: E501
-
-        Start timeout in nanoseconds  # noqa: E501
-
-        :return: The start_timeout of this Options.  # noqa: E501
-        :rtype: int
-        """
-        return self._start_timeout
-
-    @start_timeout.setter
-    def start_timeout(self, start_timeout):
-        """Sets the start_timeout of this Options.
-
-        Start timeout in nanoseconds  # noqa: E501
-
-        :param start_timeout: The start_timeout of this Options.  # noqa: E501
-        :type: int
-        """
-
-        self._start_timeout = start_timeout
 
     @property
     def wait_timeout(self):

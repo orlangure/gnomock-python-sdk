@@ -37,7 +37,6 @@ class Splunk(object):
         'values_file': 'str',
         'accept_license': 'bool',
         'admin_password': 'str',
-        'init_timeout': 'float',
         'version': 'str'
     }
 
@@ -46,11 +45,10 @@ class Splunk(object):
         'values_file': 'values_file',
         'accept_license': 'accept_license',
         'admin_password': 'admin_password',
-        'init_timeout': 'init_timeout',
         'version': 'version'
     }
 
-    def __init__(self, values=None, values_file=None, accept_license=None, admin_password=None, init_timeout=5000000000, version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, values=None, values_file=None, accept_license=None, admin_password=None, version=None, local_vars_configuration=None):  # noqa: E501
         """Splunk - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,7 +58,6 @@ class Splunk(object):
         self._values_file = None
         self._accept_license = None
         self._admin_password = None
-        self._init_timeout = None
         self._version = None
         self.discriminator = None
 
@@ -70,8 +67,6 @@ class Splunk(object):
             self.values_file = values_file
         self.accept_license = accept_license
         self.admin_password = admin_password
-        if init_timeout is not None:
-            self.init_timeout = init_timeout
         if version is not None:
             self.version = version
 
@@ -170,29 +165,6 @@ class Splunk(object):
             raise ValueError("Invalid value for `admin_password`, must not be `None`")  # noqa: E501
 
         self._admin_password = admin_password
-
-    @property
-    def init_timeout(self):
-        """Gets the init_timeout of this Splunk.  # noqa: E501
-
-        Wait for the initialization for this number of nanoseconds.   # noqa: E501
-
-        :return: The init_timeout of this Splunk.  # noqa: E501
-        :rtype: float
-        """
-        return self._init_timeout
-
-    @init_timeout.setter
-    def init_timeout(self, init_timeout):
-        """Sets the init_timeout of this Splunk.
-
-        Wait for the initialization for this number of nanoseconds.   # noqa: E501
-
-        :param init_timeout: The init_timeout of this Splunk.  # noqa: E501
-        :type: float
-        """
-
-        self._init_timeout = init_timeout
 
     @property
     def version(self):
