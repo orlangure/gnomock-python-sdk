@@ -43,7 +43,6 @@ class TestMysqlRequest(unittest.TestCase):
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
                     queries_file = '/home/gnomock/project/testdata/mysql/queries', ), 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 

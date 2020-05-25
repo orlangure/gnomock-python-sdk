@@ -38,7 +38,6 @@ class TestLocalstackRequest(unittest.TestCase):
             return LocalstackRequest(
                 preset = {"services":["s3"]}, 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 

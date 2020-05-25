@@ -50,7 +50,6 @@ class TestSplunkRequest(unittest.TestCase):
                     admin_password = 'p@s$w0rD', 
                     version = '8.0.2.1', ), 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 

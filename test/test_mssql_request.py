@@ -43,7 +43,6 @@ class TestMssqlRequest(unittest.TestCase):
                     queries_file = '/home/gnomock/project/testdata/mssql/queries', 
                     license = True, ), 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 

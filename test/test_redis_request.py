@@ -39,7 +39,6 @@ class TestRedisRequest(unittest.TestCase):
                 preset = gnomock.models.redis.Redis(
                     values = {"foo":"bar","baz":42,"meh":3.14}, ), 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 

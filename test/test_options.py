@@ -36,7 +36,6 @@ class TestOptions(unittest.TestCase):
         # model = gnomock.models.options.Options()  # noqa: E501
         if include_optional :
             return Options(
-                wait_timeout = 60000000000, 
                 env = [
                     'ENV_VAR_NAME=some-value'
                     ], 

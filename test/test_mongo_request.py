@@ -41,7 +41,6 @@ class TestMongoRequest(unittest.TestCase):
                     user = 'gnomock', 
                     password = 'p@s$w0rD', ), 
                 options = gnomock.models.options.Options(
-                    wait_timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
                         ], 
