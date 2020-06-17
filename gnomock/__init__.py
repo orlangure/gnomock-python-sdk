@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 # import apis into sdk package
 from gnomock.api.presets_api import PresetsApi
