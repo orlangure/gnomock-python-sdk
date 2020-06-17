@@ -40,7 +40,7 @@ class TestMysql(unittest.TestCase):
                 user = 'gnomock', 
                 password = 'gnomick', 
                 queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
-                queries_file = '/home/gnomock/project/testdata/mysql/queries', 
+                queries_files = ['/home/gnomock/project/testdata/mysql/queries'], 
                 version = 'latest'
             )
         else :

@@ -37,7 +37,7 @@ class Postgres(object):
         'user': 'str',
         'password': 'str',
         'queries': 'list[str]',
-        'queries_file': 'str',
+        'queries_files': 'list[str]',
         'version': 'str'
     }
 
@@ -46,11 +46,11 @@ class Postgres(object):
         'user': 'user',
         'password': 'password',
         'queries': 'queries',
-        'queries_file': 'queries_file',
+        'queries_files': 'queries_files',
         'version': 'version'
     }
 
-    def __init__(self, db=None, user=None, password=None, queries=None, queries_file=None, version='latest', local_vars_configuration=None):  # noqa: E501
+    def __init__(self, db=None, user=None, password=None, queries=None, queries_files=None, version='latest', local_vars_configuration=None):  # noqa: E501
         """Postgres - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,7 +60,7 @@ class Postgres(object):
         self._user = None
         self._password = None
         self._queries = None
-        self._queries_file = None
+        self._queries_files = None
         self._version = None
         self.discriminator = None
 
@@ -72,8 +72,8 @@ class Postgres(object):
             self.password = password
         if queries is not None:
             self.queries = queries
-        if queries_file is not None:
-            self.queries_file = queries_file
+        if queries_files is not None:
+            self.queries_files = queries_files
         if version is not None:
             self.version = version
 
@@ -170,27 +170,27 @@ class Postgres(object):
         self._queries = queries
 
     @property
-    def queries_file(self):
-        """Gets the queries_file of this Postgres.  # noqa: E501
+    def queries_files(self):
+        """Gets the queries_files of this Postgres.  # noqa: E501
 
-        A SQL file to execute while setting up container state.  # noqa: E501
+        SQL files to execute while setting up container state.  # noqa: E501
 
-        :return: The queries_file of this Postgres.  # noqa: E501
-        :rtype: str
+        :return: The queries_files of this Postgres.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._queries_file
+        return self._queries_files
 
-    @queries_file.setter
-    def queries_file(self, queries_file):
-        """Sets the queries_file of this Postgres.
+    @queries_files.setter
+    def queries_files(self, queries_files):
+        """Sets the queries_files of this Postgres.
 
-        A SQL file to execute while setting up container state.  # noqa: E501
+        SQL files to execute while setting up container state.  # noqa: E501
 
-        :param queries_file: The queries_file of this Postgres.  # noqa: E501
-        :type: str
+        :param queries_files: The queries_files of this Postgres.  # noqa: E501
+        :type: list[str]
         """
 
-        self._queries_file = queries_file
+        self._queries_files = queries_files
 
     @property
     def version(self):

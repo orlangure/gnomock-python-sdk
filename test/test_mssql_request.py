@@ -40,7 +40,7 @@ class TestMssqlRequest(unittest.TestCase):
                     db = 'mydb', 
                     password = 'Gn0m!ck~', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
-                    queries_file = '/home/gnomock/project/testdata/mssql/queries', 
+                    queries_files = ['/home/gnomock/project/testdata/mssql/queries'], 
                     license = True, 
                     version = 'latest', ), 
                 options = gnomock.models.options.Options(

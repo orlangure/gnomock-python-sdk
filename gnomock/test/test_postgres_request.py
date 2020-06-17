@@ -41,7 +41,7 @@ class TestPostgresRequest(unittest.TestCase):
                     user = 'gnomock', 
                     password = 'p@s$w0rD', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
-                    queries_file = '/home/gnomock/project/testdata/postgres/queries', 
+                    queries_files = ['/home/gnomock/project/testdata/postgres/queries'], 
                     version = 'latest', ), 
                 options = gnomock.models.options.Options(
                     timeout = 60000000000, 

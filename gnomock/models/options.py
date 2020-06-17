@@ -34,15 +34,17 @@ class Options(object):
     """
     openapi_types = {
         'timeout': 'int',
-        'env': 'list[str]'
+        'env': 'list[str]',
+        'debug': 'bool'
     }
 
     attribute_map = {
         'timeout': 'timeout',
-        'env': 'env'
+        'env': 'env',
+        'debug': 'debug'
     }
 
-    def __init__(self, timeout=None, env=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, timeout=None, env=None, debug=False, local_vars_configuration=None):  # noqa: E501
         """Options - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -50,12 +52,15 @@ class Options(object):
 
         self._timeout = None
         self._env = None
+        self._debug = None
         self.discriminator = None
 
         if timeout is not None:
             self.timeout = timeout
         if env is not None:
             self.env = env
+        if debug is not None:
+            self.debug = debug
 
     @property
     def timeout(self):
@@ -102,6 +107,29 @@ class Options(object):
         """
 
         self._env = env
+
+    @property
+    def debug(self):
+        """Gets the debug of this Options.  # noqa: E501
+
+        Set to true to see logs inside the Gnomock container  # noqa: E501
+
+        :return: The debug of this Options.  # noqa: E501
+        :rtype: bool
+        """
+        return self._debug
+
+    @debug.setter
+    def debug(self, debug):
+        """Sets the debug of this Options.
+
+        Set to true to see logs inside the Gnomock container  # noqa: E501
+
+        :param debug: The debug of this Options.  # noqa: E501
+        :type: bool
+        """
+
+        self._debug = debug
 
     def to_dict(self):
         """Returns the model properties as a dict"""
