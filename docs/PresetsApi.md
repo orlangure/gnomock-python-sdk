@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**start_mssql**](PresetsApi.md#start_mssql) | **POST** /start/mssql | Start a new Gnomock Microsoft SQL Server container
 [**start_mysql**](PresetsApi.md#start_mysql) | **POST** /start/mysql | Start a new Gnomock MySQL container
 [**start_postgres**](PresetsApi.md#start_postgres) | **POST** /start/postgres | Start a new Gnomock Postgres container
+[**start_rabbit_mq**](PresetsApi.md#start_rabbit_mq) | **POST** /start/rabbitmq | Start a new Gnomock RabbitMQ container
 [**start_redis**](PresetsApi.md#start_redis) | **POST** /start/redis | Start a new Gnomock Redis container
 [**start_splunk**](PresetsApi.md#start_splunk) | **POST** /start/splunk | Start a new Gnomock Splunk container
 [**stop**](PresetsApi.md#stop) | **POST** /stop | Stop an existing Gnomock container
@@ -301,6 +302,68 @@ with gnomock.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **postgres_request** | [**PostgresRequest**](PostgresRequest.md)|  | 
+
+### Return type
+
+[**Container**](Container.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Container created successfully |  -  |
+**400** | Invalid container configuration |  -  |
+**500** | Start failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_rabbit_mq**
+> Container start_rabbit_mq(rabbitmq_request)
+
+Start a new Gnomock RabbitMQ container
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import gnomock
+from gnomock.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
+
+# Enter a context with an instance of the API client
+with gnomock.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = gnomock.PresetsApi(api_client)
+    rabbitmq_request = gnomock.RabbitmqRequest() # RabbitmqRequest | 
+
+    try:
+        # Start a new Gnomock RabbitMQ container
+        api_response = api_instance.start_rabbit_mq(rabbitmq_request)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling PresetsApi->start_rabbit_mq: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rabbitmq_request** | [**RabbitmqRequest**](RabbitmqRequest.md)|  | 
 
 ### Return type
 
