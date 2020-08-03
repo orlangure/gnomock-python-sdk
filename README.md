@@ -84,7 +84,6 @@ All URIs are relative to *http://127.0.0.1:23042*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PresetsApi* | [**start_localstack**](docs/PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
-*PresetsApi* | [**start_memcached**](docs/PresetsApi.md#start_memcached) | **POST** /start/memcached | Start a new Gnomock Memcached container
 *PresetsApi* | [**start_mongo**](docs/PresetsApi.md#start_mongo) | **POST** /start/mongo | Start a new Gnomock MongoDB container
 *PresetsApi* | [**start_mssql**](docs/PresetsApi.md#start_mssql) | **POST** /start/mssql | Start a new Gnomock Microsoft SQL Server container
 *PresetsApi* | [**start_mysql**](docs/PresetsApi.md#start_mysql) | **POST** /start/mysql | Start a new Gnomock MySQL container
@@ -102,8 +101,6 @@ Class | Method | HTTP request | Description
  - [InvalidStopRequest](docs/InvalidStopRequest.md)
  - [Localstack](docs/Localstack.md)
  - [LocalstackRequest](docs/LocalstackRequest.md)
- - [Memcached](docs/Memcached.md)
- - [MemcachedRequest](docs/MemcachedRequest.md)
  - [Mongo](docs/Mongo.md)
  - [MongoRequest](docs/MongoRequest.md)
  - [Mssql](docs/Mssql.md)
