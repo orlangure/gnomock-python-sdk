@@ -36,7 +36,7 @@ class TestMemcachedRequest(unittest.TestCase):
         # model = gnomock.models.memcached_request.MemcachedRequest()  # noqa: E501
         if include_optional :
             return MemcachedRequest(
-                preset = gnomock.models.memcached.memcached(
+                preset = gnomock.models.memcached.Memcached(
                     values = {"foo":"YmFy","baz":"NDI=","meh":"My4xNA=="}, 
                     version = 'latest', ), 
                 options = gnomock.models.options.options(
