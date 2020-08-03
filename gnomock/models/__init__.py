@@ -19,6 +19,8 @@ from gnomock.models.invalid_start_request import InvalidStartRequest
 from gnomock.models.invalid_stop_request import InvalidStopRequest
 from gnomock.models.localstack import Localstack
 from gnomock.models.localstack_request import LocalstackRequest
+from gnomock.models.memcached import Memcached
+from gnomock.models.memcached_request import MemcachedRequest
 from gnomock.models.mongo import Mongo
 from gnomock.models.mongo_request import MongoRequest
 from gnomock.models.mssql import Mssql

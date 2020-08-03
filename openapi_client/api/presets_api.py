@@ -17,8 +17,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from gnomock.api_client import ApiClient
-from gnomock.exceptions import (  # noqa: F401
+from openapi_client.api_client import ApiClient
+from openapi_client.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
