@@ -39,7 +39,7 @@ class TestMemcachedRequest(unittest.TestCase):
                 preset = gnomock.models.memcached.Memcached(
                     values = {"foo":"YmFy","baz":"NDI=","meh":"My4xNA=="}, 
                     version = 'latest', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
