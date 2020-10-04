@@ -19,9 +19,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/orlangure/gnomock-python-sdk.git
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/orlangure/gnomock-python-sdk.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
 ```python
@@ -106,6 +106,8 @@ Class | Method | HTTP request | Description
  - [KafkaRequest](docs/KafkaRequest.md)
  - [Localstack](docs/Localstack.md)
  - [LocalstackRequest](docs/LocalstackRequest.md)
+ - [Mariadb](docs/Mariadb.md)
+ - [MariadbRequest](docs/MariadbRequest.md)
  - [Memcached](docs/Memcached.md)
  - [MemcachedRequest](docs/MemcachedRequest.md)
  - [Mongo](docs/Mongo.md)
