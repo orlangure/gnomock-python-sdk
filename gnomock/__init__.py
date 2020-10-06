@@ -36,6 +36,8 @@ from gnomock.models.kafka_messages import KafkaMessages
 from gnomock.models.kafka_request import KafkaRequest
 from gnomock.models.localstack import Localstack
 from gnomock.models.localstack_request import LocalstackRequest
+from gnomock.models.mariadb import Mariadb
+from gnomock.models.mariadb_request import MariadbRequest
 from gnomock.models.memcached import Memcached
 from gnomock.models.memcached_request import MemcachedRequest
 from gnomock.models.mongo import Mongo
