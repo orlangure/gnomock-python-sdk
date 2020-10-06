@@ -19,9 +19,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/orlangure/gnomock-python-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/orlangure/gnomock-python-sdk.git`)
 
 Then import the package:
 ```python
@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PresetsApi* | [**start_kafka**](docs/PresetsApi.md#start_kafka) | **POST** /start/kafka | Start a new Gnomock Kafka container
 *PresetsApi* | [**start_localstack**](docs/PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
+*PresetsApi* | [**start_mariadb**](docs/PresetsApi.md#start_mariadb) | **POST** /start/mariadb | Start a new Gnomock MariaDB container
 *PresetsApi* | [**start_memcached**](docs/PresetsApi.md#start_memcached) | **POST** /start/memcached | Start a new Gnomock Memcached container
 *PresetsApi* | [**start_mongo**](docs/PresetsApi.md#start_mongo) | **POST** /start/mongo | Start a new Gnomock MongoDB container
 *PresetsApi* | [**start_mssql**](docs/PresetsApi.md#start_mssql) | **POST** /start/mssql | Start a new Gnomock Microsoft SQL Server container
