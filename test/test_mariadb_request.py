@@ -36,14 +36,14 @@ class TestMariadbRequest(unittest.TestCase):
         # model = gnomock.models.mariadb_request.MariadbRequest()  # noqa: E501
         if include_optional :
             return MariadbRequest(
-                preset = gnomock.models.mariadb.mariadb(
+                preset = gnomock.models.mariadb.Mariadb(
                     db = 'mydb', 
                     user = 'gnomock', 
                     password = 'gnoria', 
                     queries = ["create table foo(bar int)","insert into foo(bar) values(1)"], 
                     queries_files = ["/home/gnomock/project/testdata/mysql/queries.sql"], 
                     version = 'latest', ), 
-                options = gnomock.models.options.options(
+                options = gnomock.models.options.Options(
                     timeout = 60000000000, 
                     env = [
                         'ENV_VAR_NAME=some-value'
