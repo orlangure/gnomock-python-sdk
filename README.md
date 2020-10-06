@@ -66,14 +66,14 @@ configuration = gnomock.Configuration(
 with gnomock.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gnomock.PresetsApi(api_client)
-    kafka_request = gnomock.KafkaRequest() # KafkaRequest | 
+    elastic_request = gnomock.ElasticRequest() # ElasticRequest | 
 
     try:
-        # Start a new Gnomock Kafka container
-        api_response = api_instance.start_kafka(kafka_request)
+        # Start a new Gnomock Elasticsearch container
+        api_response = api_instance.start_elastic(elastic_request)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling PresetsApi->start_kafka: %s\n" % e)
+        print("Exception when calling PresetsApi->start_elastic: %s\n" % e)
     
 ```
 
@@ -83,9 +83,9 @@ All URIs are relative to *http://127.0.0.1:23042*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*PresetsApi* | [**start_elastic**](docs/PresetsApi.md#start_elastic) | **POST** /start/elastic | Start a new Gnomock Elasticsearch container
 *PresetsApi* | [**start_kafka**](docs/PresetsApi.md#start_kafka) | **POST** /start/kafka | Start a new Gnomock Kafka container
 *PresetsApi* | [**start_localstack**](docs/PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
-*PresetsApi* | [**start_mariadb**](docs/PresetsApi.md#start_mariadb) | **POST** /start/mariadb | Start a new Gnomock MariaDB container
 *PresetsApi* | [**start_memcached**](docs/PresetsApi.md#start_memcached) | **POST** /start/memcached | Start a new Gnomock Memcached container
 *PresetsApi* | [**start_mongo**](docs/PresetsApi.md#start_mongo) | **POST** /start/mongo | Start a new Gnomock MongoDB container
 *PresetsApi* | [**start_mssql**](docs/PresetsApi.md#start_mssql) | **POST** /start/mssql | Start a new Gnomock Microsoft SQL Server container
@@ -100,6 +100,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Container](docs/Container.md)
+ - [Elastic](docs/Elastic.md)
+ - [ElasticRequest](docs/ElasticRequest.md)
  - [InvalidStartRequest](docs/InvalidStartRequest.md)
  - [InvalidStopRequest](docs/InvalidStopRequest.md)
  - [Kafka](docs/Kafka.md)
@@ -107,8 +109,6 @@ Class | Method | HTTP request | Description
  - [KafkaRequest](docs/KafkaRequest.md)
  - [Localstack](docs/Localstack.md)
  - [LocalstackRequest](docs/LocalstackRequest.md)
- - [Mariadb](docs/Mariadb.md)
- - [MariadbRequest](docs/MariadbRequest.md)
  - [Memcached](docs/Memcached.md)
  - [MemcachedRequest](docs/MemcachedRequest.md)
  - [Mongo](docs/Mongo.md)

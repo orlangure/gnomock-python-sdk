@@ -15,6 +15,8 @@ from __future__ import absolute_import
 
 # import models into model package
 from gnomock.models.container import Container
+from gnomock.models.elastic import Elastic
+from gnomock.models.elastic_request import ElasticRequest
 from gnomock.models.invalid_start_request import InvalidStartRequest
 from gnomock.models.invalid_stop_request import InvalidStopRequest
 from gnomock.models.kafka import Kafka
@@ -22,8 +24,6 @@ from gnomock.models.kafka_messages import KafkaMessages
 from gnomock.models.kafka_request import KafkaRequest
 from gnomock.models.localstack import Localstack
 from gnomock.models.localstack_request import LocalstackRequest
-from gnomock.models.mariadb import Mariadb
-from gnomock.models.mariadb_request import MariadbRequest
 from gnomock.models.memcached import Memcached
 from gnomock.models.memcached_request import MemcachedRequest
 from gnomock.models.mongo import Mongo

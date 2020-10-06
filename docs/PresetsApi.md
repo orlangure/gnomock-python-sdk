@@ -4,9 +4,9 @@ All URIs are relative to *http://127.0.0.1:23042*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**start_elastic**](PresetsApi.md#start_elastic) | **POST** /start/elastic | Start a new Gnomock Elasticsearch container
 [**start_kafka**](PresetsApi.md#start_kafka) | **POST** /start/kafka | Start a new Gnomock Kafka container
 [**start_localstack**](PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
-[**start_mariadb**](PresetsApi.md#start_mariadb) | **POST** /start/mariadb | Start a new Gnomock MariaDB container
 [**start_memcached**](PresetsApi.md#start_memcached) | **POST** /start/memcached | Start a new Gnomock Memcached container
 [**start_mongo**](PresetsApi.md#start_mongo) | **POST** /start/mongo | Start a new Gnomock MongoDB container
 [**start_mssql**](PresetsApi.md#start_mssql) | **POST** /start/mssql | Start a new Gnomock Microsoft SQL Server container
@@ -17,6 +17,68 @@ Method | HTTP request | Description
 [**start_splunk**](PresetsApi.md#start_splunk) | **POST** /start/splunk | Start a new Gnomock Splunk container
 [**stop**](PresetsApi.md#stop) | **POST** /stop | Stop an existing Gnomock container
 
+
+# **start_elastic**
+> Container start_elastic(elastic_request)
+
+Start a new Gnomock Elasticsearch container
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import gnomock
+from gnomock.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
+
+# Enter a context with an instance of the API client
+with gnomock.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = gnomock.PresetsApi(api_client)
+    elastic_request = gnomock.ElasticRequest() # ElasticRequest | 
+
+    try:
+        # Start a new Gnomock Elasticsearch container
+        api_response = api_instance.start_elastic(elastic_request)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling PresetsApi->start_elastic: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **elastic_request** | [**ElasticRequest**](ElasticRequest.md)|  | 
+
+### Return type
+
+[**Container**](Container.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Container created successfully |  -  |
+**400** | Invalid container configuration |  -  |
+**500** | Start failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_kafka**
 > Container start_kafka(kafka_request)
@@ -119,68 +181,6 @@ with gnomock.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **localstack_request** | [**LocalstackRequest**](LocalstackRequest.md)|  | 
-
-### Return type
-
-[**Container**](Container.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Container created successfully |  -  |
-**400** | Invalid container configuration |  -  |
-**500** | Start failed |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **start_mariadb**
-> Container start_mariadb(mariadb_request)
-
-Start a new Gnomock MariaDB container
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import gnomock
-from gnomock.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://127.0.0.1:23042
-# See configuration.py for a list of all supported configuration parameters.
-configuration = gnomock.Configuration(
-    host = "http://127.0.0.1:23042"
-)
-
-
-# Enter a context with an instance of the API client
-with gnomock.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = gnomock.PresetsApi(api_client)
-    mariadb_request = gnomock.MariadbRequest() # MariadbRequest | 
-
-    try:
-        # Start a new Gnomock MariaDB container
-        api_response = api_instance.start_mariadb(mariadb_request)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling PresetsApi->start_mariadb: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **mariadb_request** | [**MariadbRequest**](MariadbRequest.md)|  | 
 
 ### Return type
 
