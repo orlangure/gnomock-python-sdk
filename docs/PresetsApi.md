@@ -4,8 +4,10 @@ All URIs are relative to *http://127.0.0.1:23042*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**start_cockroach_db**](PresetsApi.md#start_cockroach_db) | **POST** /start/cockroachdb | Start a new Gnomock CockroachDB preset.
 [**start_elastic**](PresetsApi.md#start_elastic) | **POST** /start/elastic | Start a new Gnomock Elasticsearch container
 [**start_kafka**](PresetsApi.md#start_kafka) | **POST** /start/kafka | Start a new Gnomock Kafka container
+[**start_kubernetes**](PresetsApi.md#start_kubernetes) | **POST** /start/kubernetes | Start a new Gnomock lightweight kubernetes (k3s) preset. Use &#x60;host:&lt;kubeconfig-port&gt;/kubeconfig&#x60; to retrieve the kubeconfig file that should be used to connect to this container. 
 [**start_localstack**](PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
 [**start_mariadb**](PresetsApi.md#start_mariadb) | **POST** /start/mariadb | Start a new Gnomock MariaDB container
 [**start_memcached**](PresetsApi.md#start_memcached) | **POST** /start/memcached | Start a new Gnomock Memcached container
@@ -18,6 +20,68 @@ Method | HTTP request | Description
 [**start_splunk**](PresetsApi.md#start_splunk) | **POST** /start/splunk | Start a new Gnomock Splunk container
 [**stop**](PresetsApi.md#stop) | **POST** /stop | Stop an existing Gnomock container
 
+
+# **start_cockroach_db**
+> Container start_cockroach_db(cockroachdb_request)
+
+Start a new Gnomock CockroachDB preset.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import gnomock
+from gnomock.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
+
+# Enter a context with an instance of the API client
+with gnomock.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = gnomock.PresetsApi(api_client)
+    cockroachdb_request = gnomock.CockroachdbRequest() # CockroachdbRequest | 
+
+    try:
+        # Start a new Gnomock CockroachDB preset.
+        api_response = api_instance.start_cockroach_db(cockroachdb_request)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling PresetsApi->start_cockroach_db: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cockroachdb_request** | [**CockroachdbRequest**](CockroachdbRequest.md)|  | 
+
+### Return type
+
+[**Container**](Container.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Container created successfully |  -  |
+**400** | Invalid container configuration |  -  |
+**500** | Start failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_elastic**
 > Container start_elastic(elastic_request)
@@ -120,6 +184,68 @@ with gnomock.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **kafka_request** | [**KafkaRequest**](KafkaRequest.md)|  | 
+
+### Return type
+
+[**Container**](Container.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Container created successfully |  -  |
+**400** | Invalid container configuration |  -  |
+**500** | Start failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_kubernetes**
+> Container start_kubernetes(kubernetes_request)
+
+Start a new Gnomock lightweight kubernetes (k3s) preset. Use `host:<kubeconfig-port>/kubeconfig` to retrieve the kubeconfig file that should be used to connect to this container. 
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import gnomock
+from gnomock.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
+
+# Enter a context with an instance of the API client
+with gnomock.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = gnomock.PresetsApi(api_client)
+    kubernetes_request = gnomock.KubernetesRequest() # KubernetesRequest | 
+
+    try:
+        # Start a new Gnomock lightweight kubernetes (k3s) preset. Use `host:<kubeconfig-port>/kubeconfig` to retrieve the kubeconfig file that should be used to connect to this container. 
+        api_response = api_instance.start_kubernetes(kubernetes_request)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling PresetsApi->start_kubernetes: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kubernetes_request** | [**KubernetesRequest**](KubernetesRequest.md)|  | 
 
 ### Return type
 
