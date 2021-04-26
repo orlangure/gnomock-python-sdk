@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**start_cockroach_db**](PresetsApi.md#start_cockroach_db) | **POST** /start/cockroachdb | Start a new Gnomock CockroachDB preset.
 [**start_elastic**](PresetsApi.md#start_elastic) | **POST** /start/elastic | Start a new Gnomock Elasticsearch container
+[**start_influx_db**](PresetsApi.md#start_influx_db) | **POST** /start/influxdb | Start a new Gnomock InfluxDB preset.
 [**start_kafka**](PresetsApi.md#start_kafka) | **POST** /start/kafka | Start a new Gnomock Kafka container
 [**start_kubernetes**](PresetsApi.md#start_kubernetes) | **POST** /start/kubernetes | Start a new Gnomock lightweight kubernetes (k3s) preset. Use &#x60;host:&lt;kubeconfig-port&gt;/kubeconfig&#x60; to retrieve the kubeconfig file that should be used to connect to this container. 
 [**start_localstack**](PresetsApi.md#start_localstack) | **POST** /start/localstack | Start a new Gnomock Localstack container
@@ -122,6 +123,68 @@ with gnomock.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **elastic_request** | [**ElasticRequest**](ElasticRequest.md)|  | 
+
+### Return type
+
+[**Container**](Container.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Container created successfully |  -  |
+**400** | Invalid container configuration |  -  |
+**500** | Start failed |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **start_influx_db**
+> Container start_influx_db(influxdb_request)
+
+Start a new Gnomock InfluxDB preset.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import gnomock
+from gnomock.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://127.0.0.1:23042
+# See configuration.py for a list of all supported configuration parameters.
+configuration = gnomock.Configuration(
+    host = "http://127.0.0.1:23042"
+)
+
+
+# Enter a context with an instance of the API client
+with gnomock.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = gnomock.PresetsApi(api_client)
+    influxdb_request = gnomock.InfluxdbRequest() # InfluxdbRequest | 
+
+    try:
+        # Start a new Gnomock InfluxDB preset.
+        api_response = api_instance.start_influx_db(influxdb_request)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling PresetsApi->start_influx_db: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **influxdb_request** | [**InfluxdbRequest**](InfluxdbRequest.md)|  | 
 
 ### Return type
 
