@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **privileged** | **bool** | Runs a container in privileged mode. | [optional] 
 **cmd** | **list[str]** | Command and its arguments to execute on container startup. | [optional] 
 **disable_cleanup** | **bool** | Disables auto removal of this container after tests. | [optional] 
+**auth** | **str** | base64 encoded JSON string with docker access credentials. JSON string should include two fields, username and password. For Docker Hub, if 2FA authentication is enabled, an access token should be used instead of a password.  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
